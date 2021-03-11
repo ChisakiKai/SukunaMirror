@@ -272,17 +272,14 @@ def _mirror(bot, update, isTar=False, extract=False):
         Interval.append(setInterval(DOWNLOAD_STATUS_UPDATE_INTERVAL, update_all_messages))
 
 
-@run_async
 def mirror(update, context):
     _mirror(context.bot, update)
 
 
-@run_async
 def tar_mirror(update, context):
     _mirror(context.bot, update, True)
 
 
-@run_async
 def unzip_mirror(update, context):
     _mirror(context.bot, update, extract=True)
 
